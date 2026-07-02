@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import HomePage from "./Home/HomePage";
 import ProductsPage from "./Products/ProductsPage";
 import MaintenancePage from "./Maintenance/MaintenancePage";
@@ -8,11 +9,13 @@ import ContactPage from "./Contact/ContactPage";
 import AboutUsPage from "./About Us/AboutUsPage";
 import GalleryPage from "./Gallery/GalleryPage";
 import { RouterProvider } from "react-router/dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+
     children: [
       {
         index: true,
@@ -47,9 +50,13 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const queryClient = new QueryClient();
   return (
-    <div className="bg-[#faf8fe] text-[#05010b] h-screen">
-      <RouterProvider router={router} />
+    <div className="bg-[#faf8fe] text-[#05010b] min:h-screen">
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen={false} />
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </div>
   );
 }

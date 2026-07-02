@@ -65,7 +65,7 @@ export default function MainLayout() {
           </div>
         </div>
       </div>
-      <div className="mt-5 flex justify-center">
+      <div className="mt-10 flex justify-center min-h-screen">
         <Outlet />
       </div>
     </div>
