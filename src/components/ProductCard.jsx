@@ -8,8 +8,8 @@ function ProductCard({ product }) {
     : price;
 
   return (
-    <div className="group overflow-hidden rounded-3xl border border-violet-100 bg-white shadow-[0_16px_60px_rgba(109,40,217,0.12)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(109,40,217,0.18)]">
-      <div className="relative h-56 overflow-hidden bg-linear-to-br from-violet-100 via-fuchsia-50 to-white p-3 sm:h-60">
+    <div className="group overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-xl shadow-slate-200/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-300/70">
+      <div className="relative h-56 overflow-hidden bg-gradient-to-br from-teal-700 via-cyan-700 to-sky-800 p-3 sm:h-60">
         {image ? (
           <img
             src={image}
@@ -17,7 +17,7 @@ function ProductCard({ product }) {
             className="h-full w-full rounded-[18px] object-cover transition duration-500 group-hover:scale-110"
           />
         ) : (
-          <div className="flex h-full items-center justify-center rounded-[18px] border border-dashed border-violet-200 bg-white/80 text-sm font-medium text-violet-500">
+          <div className="flex h-full items-center justify-center rounded-[18px] border border-white/20 bg-white/15 text-sm font-medium text-cyan-50 backdrop-blur-sm">
             No image available
           </div>
         )}
@@ -35,15 +35,15 @@ function ProductCard({ product }) {
             <h3 className="text-lg font-semibold leading-tight text-slate-800">
               {name || "Premium Product"}
             </h3>
-            <span className="rounded-full bg-violet-50 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-violet-600">
-              New
-            </span>
+
           </div>
 
-          <p className="text-sm leading-6 text-slate-600">
-            {description ||
-              "A thoughtfully crafted product made for comfort and care."}
-          </p>
+          <div className="max-h-21 overflow-y-auto pr-1 text-sm leading-6 text-slate-600">
+            <p>
+              {description ||
+                "A thoughtfully crafted product made for comfort and care."}
+            </p>
+          </div>
         </div>
 
         <div className="border-t border-slate-100 pt-4">
@@ -64,7 +64,7 @@ function ProductCard({ product }) {
               </div>
             </div>
 
-            <button className="rounded-full bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700">
+            <button className="rounded-full bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700">
               Add to cart
             </button>
           </div>
