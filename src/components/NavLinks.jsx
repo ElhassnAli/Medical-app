@@ -1,47 +1,90 @@
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router";
+import { closeManu } from "../features/UiSlice";
 
-function NavLinks() {
+function NavLinks({ className = "" }) {
+  const dispatch = useDispatch();
+  const linkClassName =
+    "w-fit border-b-2 border-b-transparent px-2 py-1 transition-all duration-200 hover:bg-cyan-50 hover:text-cyan-600";
+
   return (
-    <nav className="text-3xl md:flex hidden justify-center gap-10 md:flex-row flex-col order-2 ">
+    <nav
+      className={`flex flex-col items-end justify-center gap-2 text-[0.95rem] font-medium text-slate-700 md:flex md:flex-row md:items-center md:gap-10 md:text-3xl md:text-slate-800 ${className}`}
+    >
       <NavLink
+        onClick={() => dispatch(closeManu())}
+        style={({ isActive }) => ({
+          borderBottom: isActive ? "2px solid black" : "2px solid transparent",
+          borderColor: isActive ? "black" : "transparent",
+        })}
         to="/"
-        className="hover:text-cyan-400 border-b-2 border-b-transparent hover:border-b-gray-800 "
+        className={linkClassName}
       >
         Home
       </NavLink>
       <NavLink
+        onClick={() => dispatch(closeManu())}
+        style={({ isActive }) => ({
+          borderBottom: isActive ? "2px solid black" : "2px solid transparent",
+          borderColor: isActive ? "black" : "transparent",
+        })}
         to="/products"
-        className="hover:text-cyan-400 border-b-2 border-b-transparent hover:border-b-gray-800"
+        className={linkClassName}
       >
         Products
       </NavLink>
       <NavLink
+        onClick={() => dispatch(closeManu())}
+        style={({ isActive }) => ({
+          borderBottom: isActive ? "2px solid black" : "2px solid transparent",
+          borderColor: isActive ? "black" : "transparent",
+        })}
         to="/maintenance"
-        className="hover:text-cyan-400 border-b-2 border-b-transparent hover:border-b-gray-800"
+        className={linkClassName}
       >
         Maintenance
       </NavLink>
       <NavLink
+        onClick={() => dispatch(closeManu())}
+        style={({ isActive }) => ({
+          borderBottom: isActive ? "2px solid black" : "2px solid transparent",
+          borderColor: isActive ? "black" : "transparent",
+        })}
         to="/blog"
-        className="hover:text-cyan-400 border-b-2 border-b-transparent hover:border-b-gray-800 "
+        className={linkClassName}
       >
         Blog
       </NavLink>
       <NavLink
+        onClick={() => dispatch(closeManu())}
+        style={({ isActive }) => ({
+          borderBottom: isActive ? "2px solid black" : "2px solid transparent",
+          borderColor: isActive ? "black" : "transparent",
+        })}
         to="/gallery"
-        className="hover:text-cyan-400 border-b-2 border-b-transparent hover:border-b-gray-800"
+        className={linkClassName}
       >
         Gallery
       </NavLink>
       <NavLink
+        onClick={() => dispatch(closeManu())}
+        style={({ isActive }) => ({
+          borderBottom: isActive ? "2px solid black" : "2px solid transparent",
+          borderColor: isActive ? "black" : "transparent",
+        })}
         to="/contact"
-        className="hover:text-cyan-400 border-b-2 border-b-transparent hover:border-b-gray-800"
+        className={linkClassName}
       >
         Contact
       </NavLink>
       <NavLink
+        onClick={() => dispatch(closeManu())}
+        style={({ isActive }) => ({
+          borderBottom: isActive ? "2px solid black" : "2px solid transparent",
+          borderColor: isActive ? "black" : "transparent",
+        })}
         to="/about-us"
-        className="hover:text-cyan-400 border-b-2 border-b-transparent hover:border-b-gray-800"
+        className={linkClassName}
       >
         About Us
       </NavLink>
