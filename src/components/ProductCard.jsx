@@ -8,8 +8,8 @@ function ProductCard({ product }) {
     : price;
 
   return (
-    <div className="group overflow-hidden rounded-[24px] border border-violet-100 bg-white shadow-[0_16px_60px_rgba(109,40,217,0.12)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(109,40,217,0.18)]">
-      <div className="relative h-56 overflow-hidden bg-gradient-to-br from-violet-100 via-fuchsia-50 to-white p-3 sm:h-60">
+    <div className="group overflow-hidden rounded-3xl border border-violet-100 bg-white shadow-[0_16px_60px_rgba(109,40,217,0.12)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(109,40,217,0.18)]">
+      <div className="relative h-56 overflow-hidden bg-linear-to-br from-violet-100 via-fuchsia-50 to-white p-3 sm:h-60">
         {image ? (
           <img
             src={image}
