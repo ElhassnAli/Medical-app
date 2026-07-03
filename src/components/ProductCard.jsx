@@ -35,7 +35,6 @@ function ProductCard({ product }) {
             <h3 className="text-lg font-semibold leading-tight text-slate-800">
               {name || "Premium Product"}
             </h3>
-
           </div>
 
           <div className="max-h-21 overflow-y-auto pr-1 text-sm leading-6 text-slate-600">
@@ -54,11 +53,11 @@ function ProductCard({ product }) {
               </p>
               <div className="mt-1 flex flex-wrap items-center gap-2">
                 <span className="text-xl font-bold text-slate-900">
-                  ${finalPrice?.toFixed(2)}
+                  EGP {finalPrice?.toFixed(2)}
                 </span>
                 {hasDiscount && (
                   <span className="text-sm text-slate-400 line-through">
-                    ${price?.toFixed(2)}
+                    EGP {price?.toFixed(2)}
                   </span>
                 )}
               </div>
