@@ -83,7 +83,7 @@ function ContactPage() {
                 <FaPhone className="text-cyan-200" />
                 <span className="font-medium">Phone</span>
               </div>
-              <p className="mt-2 text-sm text-cyan-50/90">+20 101 295 4398</p>
+              <p className="mt-2 text-sm text-cyan-50/90">01097203319</p>
             </div>
 
             <div className="rounded-2xl border border-white/20 bg-white/5 p-4 backdrop-blur">
