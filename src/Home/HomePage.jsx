@@ -22,7 +22,7 @@ function HomePage() {
   }
   if (products.length === 0)
     return (
-      <div className="w-full rounded-2xl border border-rose-100 bg-rose-50 p-6 text-center text-rose-600">
+      <div className="h-fit rounded-2xl border border-rose-100 bg-rose-50 p-6 text-center text-rose-600">
         No Products For Now
       </div>
     );
