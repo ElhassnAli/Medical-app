@@ -109,7 +109,7 @@ function ContactPage() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="https://wa.me/+2001012954398?text=Hello%20Medical%20Store%2C%20I%20would%20like%20to%20contact%20you."
+              href="https://wa.me/+2001097203319?text=Hello%20Medical%20Store%2C%20I%20would%20like%20to%20contact%20you."
               target="_blank"
               rel="noreferrer nofollow"
               className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-3 font-medium text-white transition hover:bg-emerald-600"

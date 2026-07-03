@@ -4,7 +4,7 @@ function SocialMediaLinks({ className = "" }) {
   return (
     <div className={`flex items-center justify-center gap-3 ${className}`}>
       <a
-        href="https://www.facebook.com/share/1ECkqogdJv/"
+        href="https://www.facebook.com/share/17aKjPTe4J/"
         target="_blank"
         rel="noreferrer nofollow"
         title="Go to Facebook Page"
@@ -14,7 +14,7 @@ function SocialMediaLinks({ className = "" }) {
         </div>
       </a>
       <a
-        href="https://wa.me/+2001012954398?text=Hello%20Medical%20Store%2C%20I%20would%20like%20to%20contact%20you."
+        href="https://wa.me/+2001097203319?text=Hello%20Medical%20Store%2C%20I%20would%20like%20to%20contact%20you."
         target="_blank"
         rel="noreferrer nofollow"
         title="Go to Whatsapp"
