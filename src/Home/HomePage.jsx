@@ -20,7 +20,12 @@ function HomePage() {
       </div>
     );
   }
-
+  if (products.length === 0)
+    return (
+      <div className="w-full rounded-2xl border border-rose-100 bg-rose-50 p-6 text-center text-rose-600">
+        No Products For Now
+      </div>
+    );
   return (
     <div className="w-full">
       <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3">
