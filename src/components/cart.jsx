@@ -52,7 +52,7 @@ Thanks!`,
         <div className="flex justify-center">
           <Link
             to="/products"
-            className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+            className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-700 cursor-pointer"
           >
             Browse Products
           </Link>
@@ -75,7 +75,7 @@ Thanks!`,
           </div>
           <button
             onClick={handleClear}
-            className="inline-flex rounded-full border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
+            className="inline-flex rounded-full border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 cursor-pointer"
           >
             Clear cart
           </button>
@@ -123,7 +123,7 @@ Thanks!`,
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex w-full items-center justify-center rounded-3xl bg-emerald-600 px-5 py-4 text-sm font-semibold text-white transition hover:bg-emerald-500"
+            className="inline-flex w-full items-center justify-center rounded-3xl bg-emerald-600 px-5 py-4 text-sm font-semibold text-white transition hover:bg-emerald-500 cursor-pointer"
           >
             Send order via WhatsApp
           </a>

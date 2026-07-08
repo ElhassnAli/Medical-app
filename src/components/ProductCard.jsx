@@ -75,7 +75,7 @@ function ProductCard({ product }) {
 
             <button
               onClick={handleAddToCart}
-              className="rounded-full bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700"
+              className="rounded-full bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700 cursor-pointer"
             >
               Add to cart
             </button>

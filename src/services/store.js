@@ -9,6 +9,8 @@ const loadCartState = () => {
     const serializedState = localStorage.getItem(CART_STORAGE_KEY);
     return serializedState ? JSON.parse(serializedState) : undefined;
   } catch (error) {
+    console.log(error);
+
     return undefined;
   }
 };
@@ -18,7 +20,7 @@ const saveCartState = (state) => {
     const serializedState = JSON.stringify(state);
     localStorage.setItem(CART_STORAGE_KEY, serializedState);
   } catch (error) {
-    // ignore write errors
+    console.log(error);
   }
 };
 

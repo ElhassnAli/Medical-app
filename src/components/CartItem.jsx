@@ -32,7 +32,7 @@ function CartItem({ item, onDecrease, onIncrease, onRemove }) {
           <div className="flex items-center gap-2 rounded-full border border-slate-200 bg-white p-1">
             <button
               onClick={() => onDecrease(item.id)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-lg font-semibold text-slate-700 transition hover:bg-slate-100"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-lg font-semibold text-slate-700 transition hover:bg-slate-100 cursor-pointer"
               aria-label="Decrease quantity"
             >
               −
@@ -42,7 +42,7 @@ function CartItem({ item, onDecrease, onIncrease, onRemove }) {
             </span>
             <button
               onClick={() => onIncrease(item)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-lg font-semibold text-white transition hover:bg-slate-700"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-lg font-semibold text-white transition hover:bg-slate-700 cursor-pointer"
               aria-label="Increase quantity"
             >
               +
@@ -53,7 +53,7 @@ function CartItem({ item, onDecrease, onIncrease, onRemove }) {
           </p>
           <button
             onClick={() => onRemove(item.id)}
-            className="text-sm font-semibold text-rose-600 transition hover:text-rose-700"
+            className="text-sm font-semibold text-rose-600 transition hover:text-rose-700 cursor-pointer"
           >
             Remove
           </button>
