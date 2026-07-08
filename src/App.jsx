@@ -1,14 +1,14 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import HomePage from "./Home/HomePage";
 import ProductsPage from "./Products/ProductsPage";
+import Cart from "./components/cart";
 import MaintenancePage from "./Maintenance/MaintenancePage";
 import BlogPage from "./Blog/BlogPage";
 import MainLayout from "./components/MainLayout";
 import ContactPage from "./Contact/ContactPage";
 import AboutUsPage from "./About Us/AboutUsPage";
 import GalleryPage from "./Gallery/GalleryPage";
-import { RouterProvider } from "react-router/dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const router = createBrowserRouter([
@@ -44,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <GalleryPage />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

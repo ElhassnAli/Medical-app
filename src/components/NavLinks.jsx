@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router";
+import { useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 import { closeManu } from "../features/UiSlice";
 
 function NavLinks({ className = "" }) {

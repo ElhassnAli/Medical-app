@@ -1,4 +1,4 @@
-import { Outlet } from "react-router";
+import { Link, Outlet } from "react-router-dom";
 import Header from "./Header";
 import NavLinks from "./NavLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
@@ -10,6 +10,7 @@ import { IoMdClose } from "react-icons/io";
 
 export default function MainLayout() {
   const isOpen = useSelector((state) => state.isManuOpen.isOpen);
+  const cartQuantity = useSelector((state) => state.cart.totalQuantity || 0);
   const dispatch = useDispatch();
 
   return (
@@ -18,7 +19,14 @@ export default function MainLayout() {
         <div className="flex w-full items-center justify-between md:flex-col md:items-center">
           <Header />
           <div className="flex items-center gap-4 md:hidden">
-            <IoCartOutline size={36} />
+            <Link to="/cart" className="relative inline-flex">
+              <IoCartOutline size={36} />
+              {cartQuantity > 0 && (
+                <span className="absolute -right-2 -top-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1.5 text-[0.65rem] font-semibold text-white">
+                  {cartQuantity}
+                </span>
+              )}
+            </Link>
             <button
               className="block"
               onClick={() => dispatch(isOpen ? closeManu() : openManu())}
@@ -61,7 +69,14 @@ export default function MainLayout() {
           <SocialMediaLinks className="flex" />
           <NavLinks />
           <div className="flex items-center gap-5">
-            <IoCartOutline size={40} />
+            <Link to="/cart" className="relative inline-flex">
+              <IoCartOutline size={40} />
+              {cartQuantity > 0 && (
+                <span className="absolute -right-2 -top-2 inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-rose-500 px-1.5 text-[0.75rem] font-semibold text-white">
+                  {cartQuantity}
+                </span>
+              )}
+            </Link>
           </div>
         </div>
       </div>
