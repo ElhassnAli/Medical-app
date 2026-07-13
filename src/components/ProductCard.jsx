@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../features/cartSlice";
+import toast from "react-hot-toast";
 
 function ProductCard({ product }) {
   const dispatch = useDispatch();
@@ -9,6 +10,7 @@ function ProductCard({ product }) {
     state.cart.items.find((item) => item.id === id),
   );
   const quantityInCart = cartItem?.quantity || 0;
+  const isInCart = quantityInCart > 0;
 
   const discountValue = Number(discount) || 0;
   const hasDiscount = discountValue > 0;
@@ -16,7 +18,15 @@ function ProductCard({ product }) {
     ? price - (price * discountValue) / 100
     : price;
 
-  const handleAddToCart = () => dispatch(cartActions.addToCart(product));
+  const handleAddToCart = () => {
+    if (isInCart) {
+      toast.error("Item is already in your cart");
+      return;
+    }
+
+    dispatch(cartActions.addToCart(product));
+    toast.success("Item added to cart successfully");
+  };
 
   return (
     <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-200/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-300/70">
@@ -35,6 +45,11 @@ function ProductCard({ product }) {
         {hasDiscount && (
           <span className="absolute left-4 top-4 rounded-full bg-rose-500 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-white shadow-lg">
             {discountValue}% off
+          </span>
+        )}
+        {isInCart && (
+          <span className="absolute right-4 top-4 rounded-full bg-emerald-500 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-white shadow-lg">
+            ✓ In cart
           </span>
         )}
       </div>
@@ -75,9 +90,13 @@ function ProductCard({ product }) {
 
             <button
               onClick={handleAddToCart}
-              className="rounded-full bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700 cursor-pointer"
+              className={`rounded-full px-4 py-2.5 text-sm font-semibold text-white transition cursor-pointer ${
+                isInCart
+                  ? "bg-emerald-600 hover:bg-emerald-700"
+                  : "bg-slate-900 hover:bg-slate-700"
+              }`}
             >
-              Add to cart
+              {isInCart ? "Added ✓" : "Add to cart"}
             </button>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
-    <section className="mx-auto w-full max-w-5xl rounded-[2rem] border border-slate-200 bg-white/90 p-10 shadow-2xl shadow-slate-200/70">
+    <section className="mx-auto w-full  rounded-4xl border border-slate-200 bg-white/90 p-10 shadow-2xl shadow-slate-200/70">
       <div className="space-y-8">
         <div className="space-y-4 text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-cyan-600">

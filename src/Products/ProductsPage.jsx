@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import apiProducts from "../utils/apiProducts";
 import LoadingIndicator from "../components/LoadingIndicator";
 import ProductCard from "../components/ProductCard";
+import { Toaster } from "react-hot-toast";
 
 function ProductsPage() {
   const { isLoading, data, error } = useQuery({
@@ -30,6 +31,9 @@ function ProductsPage() {
   return (
     <div className="space-y-8 w-full">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <Toaster position="top-center" reverseOrder={false} />
+        </div>
         {products.map((product) => (
           <ProductCard key={product.id || product.name} product={product} />
         ))}

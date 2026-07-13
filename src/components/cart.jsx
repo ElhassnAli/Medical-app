@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../features/cartSlice";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
-import Panel from "./ui/Panel";
+import Panel from "./Panel";
 
 function Cart() {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ function Cart() {
   );
 
   const handleDecrease = (id) => dispatch(cartActions.decreaseQuantity(id));
-  const handleIncrease = (item) => dispatch(cartActions.addToCart(item));
+  const handleIncrease = (id) => dispatch(cartActions.increaseQuantity(id));
   const handleRemove = (id) => dispatch(cartActions.removeFromCart(id));
   const handleClear = () => dispatch(cartActions.clearCart());
 
@@ -89,7 +89,7 @@ Thanks!`,
               key={item.id}
               item={item}
               onDecrease={handleDecrease}
-              onIncrease={handleIncrease}
+              onIncrease={() => handleIncrease(item.id)}
               onRemove={handleRemove}
             />
           ))}

@@ -1,4 +1,4 @@
-import Panel from "./ui/Panel";
+import Panel from "./Panel";
 
 function CartItem({ item, onDecrease, onIncrease, onRemove }) {
   return (
