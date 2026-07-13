@@ -43,7 +43,7 @@ function ContactPage() {
       from_email: formData.email,
       phone: formData.phone,
       message: formData.message,
-      to_email: "elhassnali4@gmail.com",
+      to_email: "mahmoudmmaboelfadl@gmail.com",
     };
 
     emailjs
@@ -83,6 +83,7 @@ function ContactPage() {
                 <FaPhone className="text-cyan-200" />
                 <span className="font-medium">Phone</span>
               </div>
+              <p className="mt-2 text-sm text-cyan-50/90">01014443918</p>
               <p className="mt-2 text-sm text-cyan-50/90">01097203319</p>
             </div>
 
@@ -92,7 +93,7 @@ function ContactPage() {
                 <span className="font-medium">Email</span>
               </div>
               <p className="mt-2 text-sm text-cyan-50/90">
-                elhassnali4@gmail.com
+                mahmoudmmaboelfadl@gmail.com
               </p>
             </div>
 
@@ -121,7 +122,7 @@ function ContactPage() {
             <a
               rel="noreferrer nofollow"
               target="_blank"
-              href="mailto:elhassnali4@gmail.com"
+              href="mailto:mahmoudmmaboelfadl@gmail.com"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-3 font-medium text-white transition hover:bg-white/20"
               title="Go to Email"
             >

@@ -38,7 +38,8 @@ function MaintenancePage() {
               </span>
               <div>
                 <p className="text-sm text-slate-500">اتصل بنا</p>
-                <p className="font-semibold text-slate-800">0 10 14443918</p>
+                <p className="font-semibold text-slate-800">01014443918</p>
+                <p className="font-semibold text-slate-800">01097203319</p>
               </div>
             </a>
 
