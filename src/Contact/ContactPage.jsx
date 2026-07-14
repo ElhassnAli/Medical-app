@@ -43,7 +43,7 @@ function ContactPage() {
       from_email: formData.email,
       phone: formData.phone,
       message: formData.message,
-      to_email: "mahmoudmmaboelfadl@gmail.com",
+      to_email: "companyelrowad@gmail.com",
     };
 
     emailjs
