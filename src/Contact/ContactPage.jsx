@@ -31,9 +31,7 @@ function ContactPage() {
     event.preventDefault();
 
     if (!serviceId || !templateId || !publicKey) {
-      setErrorMessage(
-        "Please add your EmailJS credentials to the .env.local file.",
-      );
+      setErrorMessage("Try again later 🫡");
       setIsSubmitted(false);
       return;
     }
@@ -55,9 +53,7 @@ function ContactPage() {
       })
       .catch(() => {
         setIsSubmitted(false);
-        setErrorMessage(
-          "Failed to send the message. Please check your EmailJS setup.",
-        );
+        setErrorMessage("Failed to send the message.");
       });
   };
 
@@ -93,7 +89,7 @@ function ContactPage() {
                 <span className="font-medium">Email</span>
               </div>
               <p className="mt-2 text-sm text-cyan-50/90">
-                mahmoudmmaboelfadl@gmail.com
+                companyelrowad@gmail.com
               </p>
             </div>
 
@@ -122,7 +118,7 @@ function ContactPage() {
             <a
               rel="noreferrer nofollow"
               target="_blank"
-              href="mailto:mahmoudmmaboelfadl@gmail.com"
+              href="mailto:companyelrowad@gmail.com"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-3 font-medium text-white transition hover:bg-white/20"
               title="Go to Email"
             >
