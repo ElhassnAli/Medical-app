@@ -5,7 +5,7 @@ import { closeManu } from "../features/UiSlice";
 function NavLinks({ className = "" }) {
   const dispatch = useDispatch();
   const linkClassName =
-    "w-fit border-b-2 border-b-transparent px-2 py-1 transition-all duration-200 hover:bg-cyan-50 hover:text-cyan-600";
+    "w-fit border-b-2 border-b-transparent px-2 py-1 transition-all duration-200  hover:text-cyan-600";
 
   return (
     <nav
@@ -44,7 +44,7 @@ function NavLinks({ className = "" }) {
       >
         Maintenance
       </NavLink>
-      <NavLink
+      {/* <NavLink
         onClick={() => dispatch(closeManu())}
         style={({ isActive }) => ({
           borderBottom: isActive ? "2px solid black" : "2px solid transparent",
@@ -54,8 +54,8 @@ function NavLinks({ className = "" }) {
         className={linkClassName}
       >
         Blog
-      </NavLink>
-      <NavLink
+      </NavLink> */}
+      {/* <NavLink
         onClick={() => dispatch(closeManu())}
         style={({ isActive }) => ({
           borderBottom: isActive ? "2px solid black" : "2px solid transparent",
@@ -65,7 +65,7 @@ function NavLinks({ className = "" }) {
         className={linkClassName}
       >
         Gallery
-      </NavLink>
+      </NavLink> */}
       <NavLink
         onClick={() => dispatch(closeManu())}
         style={({ isActive }) => ({

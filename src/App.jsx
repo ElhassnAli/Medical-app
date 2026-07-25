@@ -29,10 +29,10 @@ const router = createBrowserRouter([
         path: "/maintenance",
         element: <MaintenancePage />,
       },
-      {
-        path: "/blog",
-        element: <BlogPage />,
-      },
+      // {
+      //   path: "/blog",
+      //   element: <BlogPage />,
+      // },
       {
         path: "/contact",
         element: <ContactPage />,
@@ -41,10 +41,10 @@ const router = createBrowserRouter([
         path: "/about-us",
         element: <AboutUsPage />,
       },
-      {
-        path: "/gallery",
-        element: <GalleryPage />,
-      },
+      // {
+      //   path: "/gallery",
+      //   element: <GalleryPage />,
+      // },
       {
         path: "/cart",
         element: <Cart />,

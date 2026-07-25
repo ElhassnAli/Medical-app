@@ -30,10 +30,10 @@ function ProductsPage() {
 
   return (
     <div className="space-y-8 w-full">
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <div>
-          <Toaster position="top-center" reverseOrder={false} />
-        </div>
+      <div>
+        <Toaster position="top-center" reverseOrder={false} />
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-3">
         {products.map((product) => (
           <ProductCard key={product.id || product.name} product={product} />
         ))}
